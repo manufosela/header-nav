@@ -49,7 +49,7 @@ export class HeaderNav extends MixinGetLightDom(LitElement) {
     if (this.logo) {
       return html`
         <div id="home" class="navbar-logo">
-          <a class="navbar-logo__link location__link" rel="noopener noreferrer"
+          <a class="navbar-logo__link" rel="noopener noreferrer"
             href="/">
             <img class="main-logo" src="${this.logo}" alt="logo" />
           </a>
