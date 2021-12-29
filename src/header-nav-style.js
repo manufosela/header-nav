@@ -76,7 +76,7 @@ export const headerNavStylesMobile = `
   .nav > .nav-btn {
     display: inline-block!important;
     position: absolute;
-    right: 0px;
+    right: 1rem;
     top: 0px;
   }
   .nav > .nav-btn > label {
