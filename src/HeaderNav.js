@@ -1,6 +1,6 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, unsafeCSS } from 'lit';
 import { MixinGetLightDom } from '@manufosela/mixin-getlightdom';
-import { headerNavStyles } from './header-nav-style.js';
+import { headerNavStyles, headerNavStylesMobile } from './header-nav-style.js?minWidthToDesktop=1440px';
 
 /**
  * `header-nav`
@@ -22,6 +22,10 @@ export class HeaderNav extends MixinGetLightDom(LitElement) {
       menuItems: {
         type: Array,
       },
+      minWidthToDesktop: {
+        type: String,
+        attribute: 'min-width-to-desktop',
+      },
     };
   }
 
@@ -34,6 +38,7 @@ export class HeaderNav extends MixinGetLightDom(LitElement) {
     this.logo = null;
     this.menuItems = [];
     this.selected = '';
+    this.minWidthToDesktop = '600px';
   }
 
   lightDomElements() {
@@ -58,8 +63,14 @@ export class HeaderNav extends MixinGetLightDom(LitElement) {
     return html``;
   }
 
+  getMobileStyles() {
+    const mobileCSS = `@media (max-width: ${  this.minWidthToDesktop  })`;
+    return html`<style>${mobileCSS}{${headerNavStylesMobile}}</style>`;
+  }
+
   render() {
     return html`
+      ${this.getMobileStyles()}
       <div class="nav">
         <input type="checkbox" id="nav-check" />
         <div class="nav-header">
