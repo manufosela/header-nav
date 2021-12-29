@@ -1,6 +1,6 @@
 import { LitElement, html, unsafeCSS } from 'lit';
 import { MixinGetLightDom } from '@manufosela/mixin-getlightdom';
-import { headerNavStyles, headerNavStylesMobile } from './header-nav-style.js?minWidthToDesktop=1440px';
+import { headerNavStyles, headerNavStylesMobile } from './header-nav-style.js';
 
 /**
  * `header-nav`

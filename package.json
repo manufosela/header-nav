@@ -3,7 +3,7 @@
   "description": "Webcomponent header-nav following open-wc recommendations",
   "license": "MIT",
   "author": "manufosela",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "header-nav.js",
   "type": "module",
   "module": "header-nav.js",
